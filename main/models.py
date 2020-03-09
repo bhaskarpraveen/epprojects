@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Detail(models.Model):
-    team_name = models.CharField(max_length=50)
+  #  team_name = models.CharField(max_length=50)
     project_id = models.CharField(max_length=2)
     member1=models.CharField(max_length=9)
     member2=models.CharField(max_length=9)
@@ -12,4 +12,4 @@ class Detail(models.Model):
 
 
     def __str__(self):
-        return self.team_name
+        return "Team"+str(self.id)

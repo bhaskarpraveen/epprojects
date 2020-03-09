@@ -3,12 +3,12 @@
        [{
          name: "django_with_pm2",          
          script: "manage.py",
-         args: ["runserver", "localhost:8000"], 
+         args: ["runserver","127.0.0.1:8000"], 
          exec_mode: "fork", 
          instances: "1", 
          wait_ready: true, 
          autorestart: false, 
          max_restarts: 5, 
-         interpreter : "/home/ubuntu/ep/shell/bin/python" 
+         interpreter : "/home/ubuntu/ep/env/bin/python" 
        }] 
  }  

@@ -8,23 +8,15 @@
 <form method="POST" action="/">
     {% csrf_token %}
     <center>
-        <table>
-
-       <tr>
-           <td>
-            Enter team name:
-           </td>
-           <td>
-            <input type="text" name="teamname" placeholder="Enter team name" required>
-           </td>
-       </tr>
+      
+<table>
        <tr>
            <td>
             Enter problem number:
             
            </td>
            <td>
-            <input type="text" name="problem" placeholder="Enter problem number" required>
+            <input type="text" name="problem" placeholder="Enter problem number" maxlength="2" required>
            </td>
        </tr>
        <tr>
@@ -34,7 +26,7 @@ Enter member1 id number:
 
         </td>
         <td>
-            <input type="text" name="member1" placeholder="Enter member1 idnumber" required>
+            <input type="text" name="member1" placeholder="Enter member1 idnumber" minlength="9" maxlength="9"  required>
         </td>
     </tr>
     <tr>
@@ -43,7 +35,7 @@ Enter member1 id number:
 
         </td>
         <td>
-            <input type="text" name="member2" placeholder="Enter member2 idnumber"  required>
+            <input type="text" name="member2" placeholder="Enter member2 idnumber" minlength="9"  maxlength="9"  required>
         </td>
     </tr>
     <tr>
@@ -52,7 +44,7 @@ Enter member1 id number:
 
         </td>
         <td>
-            <input type="text" name="member3" placeholder="Enter member3 idnumber"  required> 
+            <input type="text" name="member3" placeholder="Enter member3 idnumber" maxlength="9" minlength="9" required> 
         </td>
     </tr>
     <tr>
@@ -61,7 +53,7 @@ Enter member1 id number:
 
         </td>
         <td>
-            <input type="text" name="member4" placeholder="Enter member4 idnumber"  required>
+            <input type="text" name="member4" placeholder="Enter member4 idnumber" maxlength="9" minlength="9"  required>
         </td>
     </tr>
     <tr>
@@ -70,7 +62,7 @@ Enter member1 id number:
 
         </td>
         <td>
-            <input type="text" name="member5" placeholder="Enter member5 idnumber ">
+            <input type="text" name="member5" placeholder="Enter member5 idnumber " minlength="9" maxlength="9" >
         </td>
     </tr>
 

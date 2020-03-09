@@ -4,9 +4,9 @@ from .models import Detail
 # Create your views here.
 def Main(request):
     if request.method == 'POST':
-        checkTeamName = Detail.objects.filter(team_name=request.POST['teamname'])
-        if(checkTeamName):
-            return HttpResponse("Team Name already exists")
+        #checkTeamName = Detail.objects.filter(team_name=request.POST['teamname'])
+       # if(checkTeamName):
+        #    return HttpResponse("Team Name already exists")
         checkAb = Detail.objects.filter(project_id=request.POST['problem']).count()
         if(checkAb==2):
             return HttpResponse("Project is not available")
@@ -43,12 +43,12 @@ def Main(request):
         fiveCheck3=Detail.objects.filter(member3=request.POST['member5'])
         fiveCheck4=Detail.objects.filter(member4=request.POST['member5'])
         fiveCheck5=Detail.objects.filter(member5=request.POST['member5'])
-        if(fiveCheck1 or fiveCheck2 or fiveCheck3 or fiveCheck4 or fiveCheck5):
+        if( (request.POST['member5']) and  (fiveCheck1 or fiveCheck2 or fiveCheck3 or fiveCheck4 or fiveCheck5)):
             return HttpResponse("Member five is already in another team")
         
         det=Detail()
         
-        det.team_name=request.POST['teamname']
+        #det.team_name=request.POST['teamname']
         det.project_id=request.POST['problem']
         det.member1=request.POST['member1']
         det.member2=request.POST['member2']

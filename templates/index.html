@@ -1,0 +1,89 @@
+<br><br><br><br><br>
+<center>
+    Enterprise Programming project details
+</center>
+
+<br>
+<br><br>
+<form method="POST" action="/">
+    {% csrf_token %}
+    <center>
+        <table>
+
+       <tr>
+           <td>
+            Enter team name:
+           </td>
+           <td>
+            <input type="text" name="teamname" placeholder="Enter team name" required>
+           </td>
+       </tr>
+       <tr>
+           <td>
+            Enter problem number:
+            
+           </td>
+           <td>
+            <input type="text" name="problem" placeholder="Enter problem number" required>
+           </td>
+       </tr>
+       <tr>
+        <td>
+            
+Enter member1 id number:
+
+        </td>
+        <td>
+            <input type="text" name="member1" placeholder="Enter member1 idnumber" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Enter member2 id number:
+
+        </td>
+        <td>
+            <input type="text" name="member2" placeholder="Enter member2 idnumber"  required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Enter member3 id number:
+
+        </td>
+        <td>
+            <input type="text" name="member3" placeholder="Enter member3 idnumber"  required> 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Enter member4 id number:
+
+        </td>
+        <td>
+            <input type="text" name="member4" placeholder="Enter member4 idnumber"  required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Enter member5 id number(optional):
+
+        </td>
+        <td>
+            <input type="text" name="member5" placeholder="Enter member5 idnumber ">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <center>
+                <input type="submit" value="submit">
+            </center>
+           
+        </td>
+      
+    </tr>
+
+</table>
+</center>
+</form>
